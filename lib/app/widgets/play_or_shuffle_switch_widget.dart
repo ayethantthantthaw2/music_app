@@ -24,7 +24,7 @@ class PlayOrShuffleSwitch extends StatelessWidget {
         child: Stack(
           children: [
             AnimatedPositioned(
-              left: isPlay ? 0 : Get.size.width * 0.45,
+              left: isPlay ? 0 : Get.size.width * 0.43,
               duration: const Duration(milliseconds: 100),
               child: Container(
                 height: 46,
