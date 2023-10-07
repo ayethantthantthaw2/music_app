@@ -128,6 +128,7 @@ class SongController extends GetxController {
       isHasPrevious = true;
       await audioPlayer.seekToNext();
       selectedSong = songs[audioPlayer?.currentIndex ?? 0];
+      totalDuration.value = audioPlayer?.duration ?? const Duration(seconds: 0);
     } else {
       isHasNext = false;
     }
@@ -139,6 +140,7 @@ class SongController extends GetxController {
       isHasNext = true;
       await audioPlayer.seekToPrevious();
       selectedSong = songs[audioPlayer?.currentIndex ?? 0];
+      totalDuration.value = audioPlayer?.duration ?? const Duration(seconds: 0);
     } else {
       isHasPrevious = false;
     }
@@ -147,20 +149,20 @@ class SongController extends GetxController {
   getSongs() {
     songs = [
       Song(
-          title: 'Seven',
-          description: 'BTS',
-          url: 'assets/music/seven.mp3',
-          coverUrl: 'assets/images/seven.jpeg'),
+          title: 'Butterfly',
+          description: 'Blush',
+          url: 'assets/music/butterfly.mp3',
+          coverUrl: 'assets/images/butterfly.jpg'),
       Song(
-          title: 'Super Shy',
-          description: 'New Jeans',
-          url: 'assets/music/supershy.mp3',
-          coverUrl: 'assets/images/super_shy.jpg'),
+          title: 'Radio',
+          description: 'Lu Hpring',
+          url: 'assets/music/radio.mp3',
+          coverUrl: 'assets/images/radio.jpg'),
       Song(
-          title: 'Playing With Fire',
-          description: 'Black Pink',
-          url: 'assets/music/playingwithfire.mp3',
-          coverUrl: 'assets/images/playing_with_fire.jpeg'),
+          title: 'A Yan Lwan Nay P',
+          description: 'May',
+          url: 'assets/music/AYanLwanNayP.mp3',
+          coverUrl: 'assets/images/ayanlwannayp.jpg'),
     ];
   }
 }
